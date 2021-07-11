@@ -1,0 +1,20 @@
+﻿<h3>Get power of @Pow</h3>
+<input type="number" @bind="_base" />
+
+<button @onclick="ComputePow"></button>
+
+<p>@_result</p>
+
+@code {
+    [Parameter]
+    public int Pow { get; set; }
+
+    private int _base;
+
+    private int _result;
+
+    private void ComputePow()
+    {
+        _result = (int) Math.Pow(_base, Pow);
+    }
+}

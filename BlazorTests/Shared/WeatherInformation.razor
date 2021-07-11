@@ -1,0 +1,12 @@
+﻿@using BlazorTests.Data
+<tr>
+    <td>@Forecast.Date.ToShortDateString()</td>
+    <td>@Forecast.TemperatureC</td>
+    <td>@Forecast.TemperatureF</td>
+    <td>@Forecast.Summary</td>
+</tr>
+
+@code {
+    [Parameter]
+    public WeatherForecast Forecast { get; set; }
+}
